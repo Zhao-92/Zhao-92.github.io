@@ -168,7 +168,7 @@
 
             ctx.moveTo(0, 0);
             ctx.scale(0.75, 0.75);
-            ctx.font = "12px 微软雅黑,Verdana"; // 字号肿么没有用? (ˉ(∞)ˉ)
+            ctx.font = "12px 微软雅黑,Verdana";
             ctx.fillText("click here", 23, 16);
             ctx.restore();
         },
@@ -190,7 +190,7 @@
         this.point = new Point(tree.seed.heart.point.x, tree.height - height / 2);
         this.width = width;
         this.height = height;
-        this.speed = speed || 2;
+        this.speed = speed || 5;
         this.length = 0;
     }
     Footer.prototype = {
@@ -237,7 +237,7 @@
             var x = seed.x || this.width / 2;
             var y = seed.y || this.height / 2;
             var point = new Point(x, y);
-            var color = seed.color || '#FF0000';
+            var color = seed.color || '#2c44ff';
             var scale = seed.scale || 1;
 
             this.seed = new Seed(this, point, scale, color);
@@ -471,7 +471,7 @@
     Bloom = function(tree, point, figure, color, alpha, angle, scale, place, speed) {
         this.tree = tree;
         this.point = point;
-        this.color = color || 'rgb(255,' + random(0, 255) + ',' + random(0, 255) + ')';
+        this.color = color || 'rgb(240,' + random(0, 255) + ',' + random(0, 255) + ')';
         this.alpha = alpha || random(0.3, 1);
         this.angle = angle || random(0, 360);
         this.scale = scale || 0.1;
